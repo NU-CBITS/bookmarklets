@@ -1,0 +1,20 @@
+fill in password fields with randomly generated values <a href="javascript:
+  (function(d) {
+    var password = randomString();
+    $('input[type=password]').val(password);
+    alert(password);
+  }(window.document));
+
+  function randomString()
+  {
+    var text = '';
+    var source = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var sourceLength = source.length;
+
+    for (var i = 0; i < 20; i++) {
+      text += source.charAt(Math.floor(Math.random() * sourceLength));
+    }
+
+    return text;
+  }
+">passwords</a>
